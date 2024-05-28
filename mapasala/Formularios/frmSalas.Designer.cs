@@ -124,6 +124,7 @@ namespace mapasala.Formularios
             this.btnSalvarSala1.TabIndex = 10;
             this.btnSalvarSala1.Text = "Salvar";
             this.btnSalvarSala1.UseVisualStyleBackColor = true;
+            this.btnSalvarSala1.Click += new System.EventHandler(this.btnSalvarSala1_Click);
             // 
             // numCompsala1
             // 
