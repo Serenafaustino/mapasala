@@ -107,12 +107,14 @@ namespace mapasala
             this.professoresToolStripMenuItem1.Name = "professoresToolStripMenuItem1";
             this.professoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.professoresToolStripMenuItem1.Text = "Professores";
+            this.professoresToolStripMenuItem1.Click += new System.EventHandler(this.professoresToolStripMenuItem1_Click);
             // 
             // disciplinasToolStripMenuItem
             // 
             this.disciplinasToolStripMenuItem.Name = "disciplinasToolStripMenuItem";
             this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.disciplinasToolStripMenuItem.Text = "Disciplinas";
+            this.disciplinasToolStripMenuItem.Click += new System.EventHandler(this.disciplinasToolStripMenuItem_Click);
             // 
             // cursosToolStripMenuItem
             // 
