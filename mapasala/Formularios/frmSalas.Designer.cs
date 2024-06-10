@@ -34,16 +34,17 @@ namespace mapasala.Formularios
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNomesala1 = new System.Windows.Forms.TextBox();
-            this.txtIdSala1 = new System.Windows.Forms.TextBox();
             this.chkIsLabSala1 = new System.Windows.Forms.CheckBox();
             this.chkDisponivSala1 = new System.Windows.Forms.CheckBox();
             this.btnSalvarSala1 = new System.Windows.Forms.Button();
             this.numCompsala1 = new System.Windows.Forms.NumericUpDown();
             this.numCadeiraSala1 = new System.Windows.Forms.NumericUpDown();
             this.dtGridSalas = new System.Windows.Forms.DataGridView();
+            this.numIdSalas = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numCompsala1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCadeiraSala1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numIdSalas)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,13 +89,6 @@ namespace mapasala.Formularios
             this.txtNomesala1.Name = "txtNomesala1";
             this.txtNomesala1.Size = new System.Drawing.Size(100, 20);
             this.txtNomesala1.TabIndex = 4;
-            // 
-            // txtIdSala1
-            // 
-            this.txtIdSala1.Location = new System.Drawing.Point(38, 35);
-            this.txtIdSala1.Name = "txtIdSala1";
-            this.txtIdSala1.Size = new System.Drawing.Size(35, 20);
-            this.txtIdSala1.TabIndex = 7;
             // 
             // chkIsLabSala1
             // 
@@ -142,25 +136,32 @@ namespace mapasala.Formularios
             // 
             // dtGridSalas
             // 
-            this.dtGridSalas.BackgroundColor = System.Drawing.Color.LavenderBlush;
+            this.dtGridSalas.BackgroundColor = System.Drawing.Color.MistyRose;
             this.dtGridSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridSalas.Location = new System.Drawing.Point(38, 73);
             this.dtGridSalas.Name = "dtGridSalas";
             this.dtGridSalas.Size = new System.Drawing.Size(727, 329);
             this.dtGridSalas.TabIndex = 13;
             // 
+            // numIdSalas
+            // 
+            this.numIdSalas.Location = new System.Drawing.Point(31, 36);
+            this.numIdSalas.Name = "numIdSalas";
+            this.numIdSalas.Size = new System.Drawing.Size(50, 20);
+            this.numIdSalas.TabIndex = 14;
+            // 
             // frmSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 425);
+            this.Controls.Add(this.numIdSalas);
             this.Controls.Add(this.dtGridSalas);
             this.Controls.Add(this.numCadeiraSala1);
             this.Controls.Add(this.numCompsala1);
             this.Controls.Add(this.btnSalvarSala1);
             this.Controls.Add(this.chkDisponivSala1);
             this.Controls.Add(this.chkIsLabSala1);
-            this.Controls.Add(this.txtIdSala1);
             this.Controls.Add(this.txtNomesala1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -173,6 +174,7 @@ namespace mapasala.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.numCompsala1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCadeiraSala1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numIdSalas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,12 +187,12 @@ namespace mapasala.Formularios
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNomesala1;
-        private System.Windows.Forms.TextBox txtIdSala1;
         private System.Windows.Forms.CheckBox chkIsLabSala1;
         private System.Windows.Forms.CheckBox chkDisponivSala1;
         private System.Windows.Forms.Button btnSalvarSala1;
         private System.Windows.Forms.NumericUpDown numCompsala1;
         private System.Windows.Forms.NumericUpDown numCadeiraSala1;
         private System.Windows.Forms.DataGridView dtGridSalas;
+        private System.Windows.Forms.NumericUpDown numIdSalas;
     }
 }

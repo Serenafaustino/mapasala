@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,10 @@ using System.Windows.Forms;
 
 namespace mapasala.Formularios
 {
-    BindingSource dados;
+    
     public partial class frmCursos : Form
     {
+        BindingSource dados;
         public frmCursos()
         {
             InitializeComponent();
@@ -22,13 +24,18 @@ namespace mapasala.Formularios
 
         private void btnSalvarCursos_Click(object sender, EventArgs e)
         {
-            CursosEntidade curso = new CursosEntidade();
-            curso.Id = Convert.ToInt32(txtIdSala1.Text);
+            cursoEntidades curso = new cursoEntidades();
+            curso.Id = Convert.ToInt32(numIdCursos.Value);
             curso.Nome = txtNomeCursos.Text;
             curso.Ativo = chkAtivoCursos.Checked;
          
 
             dados.Add(curso);
+        }
+
+        private void DtGridCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

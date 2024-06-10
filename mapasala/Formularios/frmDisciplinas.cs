@@ -24,7 +24,7 @@ namespace mapasala.Formularios
         private void btnSalvarDisciplina_Click(object sender, EventArgs e)
         {
             DisciplinasEntidades disciplina = new DisciplinasEntidades();
-            disciplina.Id = Convert.ToInt32(txtIdDisciplinas.Text);
+            disciplina.Id = Convert.ToInt32(numIdDisciplinas.Value);
             disciplina.Nome = txtNomeDisciplina.Text;
             disciplina.Sigla = txtSiglaDisciplinas.Text;
             disciplina.Ativo = chkAtivoDisciplina.Checked;

@@ -53,8 +53,14 @@ namespace mapasala
 
         private void disciplinasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDisciplinas p = new frmDisciplinas();
-            p.ShowDialog();
+            frmDisciplinas d = new frmDisciplinas();
+            d.ShowDialog();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios u = new frmUsuarios();
+            u.ShowDialog();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace mapasala.Formularios
         private void bntSalvar_Click(object sender, EventArgs e)
         {
             ProfessoresEntidade Professor = new ProfessoresEntidade();
-            Professor.Id = Convert.ToInt32(txtId.Text);
+            Professor.Id = Convert.ToInt32(numIdProf.Value);
             Professor.Nome = txtNomeProf.Text;
             Professor.Apelido = txtApelidoprof.Text;
 

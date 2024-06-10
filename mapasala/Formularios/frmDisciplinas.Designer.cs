@@ -36,10 +36,11 @@ namespace mapasala.Formularios
             this.lblSiglaDisciplinas = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.DtGridDisciplina = new System.Windows.Forms.DataGridView();
-            this.txtIdDisciplinas = new System.Windows.Forms.TextBox();
             this.txtNomeDisciplina = new System.Windows.Forms.TextBox();
             this.txtSiglaDisciplinas = new System.Windows.Forms.TextBox();
+            this.numIdDisciplinas = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridDisciplina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numIdDisciplinas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvarDisciplina
@@ -65,7 +66,7 @@ namespace mapasala.Formularios
             // lblIdDisciplinas
             // 
             this.lblIdDisciplinas.AutoSize = true;
-            this.lblIdDisciplinas.Location = new System.Drawing.Point(12, 9);
+            this.lblIdDisciplinas.Location = new System.Drawing.Point(27, 9);
             this.lblIdDisciplinas.Name = "lblIdDisciplinas";
             this.lblIdDisciplinas.Size = new System.Drawing.Size(16, 13);
             this.lblIdDisciplinas.TabIndex = 2;
@@ -99,20 +100,13 @@ namespace mapasala.Formularios
             // 
             // DtGridDisciplina
             // 
-            this.DtGridDisciplina.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.DtGridDisciplina.BackgroundColor = System.Drawing.Color.MistyRose;
             this.DtGridDisciplina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGridDisciplina.Location = new System.Drawing.Point(15, 81);
             this.DtGridDisciplina.Name = "DtGridDisciplina";
             this.DtGridDisciplina.Size = new System.Drawing.Size(419, 236);
             this.DtGridDisciplina.TabIndex = 6;
             this.DtGridDisciplina.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridDisciplina_CellContentClick);
-            // 
-            // txtIdDisciplinas
-            // 
-            this.txtIdDisciplinas.Location = new System.Drawing.Point(12, 35);
-            this.txtIdDisciplinas.Name = "txtIdDisciplinas";
-            this.txtIdDisciplinas.Size = new System.Drawing.Size(52, 20);
-            this.txtIdDisciplinas.TabIndex = 7;
             // 
             // txtNomeDisciplina
             // 
@@ -128,14 +122,21 @@ namespace mapasala.Formularios
             this.txtSiglaDisciplinas.Size = new System.Drawing.Size(55, 20);
             this.txtSiglaDisciplinas.TabIndex = 9;
             // 
+            // numIdDisciplinas
+            // 
+            this.numIdDisciplinas.Location = new System.Drawing.Point(15, 33);
+            this.numIdDisciplinas.Name = "numIdDisciplinas";
+            this.numIdDisciplinas.Size = new System.Drawing.Size(48, 20);
+            this.numIdDisciplinas.TabIndex = 10;
+            // 
             // frmDisciplinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numIdDisciplinas);
             this.Controls.Add(this.txtSiglaDisciplinas);
             this.Controls.Add(this.txtNomeDisciplina);
-            this.Controls.Add(this.txtIdDisciplinas);
             this.Controls.Add(this.DtGridDisciplina);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblSiglaDisciplinas);
@@ -144,8 +145,10 @@ namespace mapasala.Formularios
             this.Controls.Add(this.chkAtivoDisciplina);
             this.Controls.Add(this.btnSalvarDisciplina);
             this.Name = "frmDisciplinas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDisciplinas";
             ((System.ComponentModel.ISupportInitialize)(this.DtGridDisciplina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numIdDisciplinas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,8 +163,8 @@ namespace mapasala.Formularios
         private System.Windows.Forms.Label lblSiglaDisciplinas;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView DtGridDisciplina;
-        private System.Windows.Forms.TextBox txtIdDisciplinas;
         private System.Windows.Forms.TextBox txtNomeDisciplina;
         private System.Windows.Forms.TextBox txtSiglaDisciplinas;
+        private System.Windows.Forms.NumericUpDown numIdDisciplinas;
     }
 }

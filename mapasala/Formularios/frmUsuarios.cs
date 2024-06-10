@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,24 @@ namespace mapasala.Formularios
 {
     public partial class frmUsuarios : Form
     {
+        BindingSource dados;
         public frmUsuarios()
         {
             InitializeComponent();
+            dados = new BindingSource();
+            DtGridUsuarios.DataSource = dados;
+        }
+
+        private void btnSalvarUsuarios_Click(object sender, EventArgs e)
+        {
+            UsuariosEntidade usuario = new UsuariosEntidade();
+            usuario.Id = Convert.ToInt32(numIdUsuario.Value);
+            usuario.Login = txtLoginUsuario.Text;
+            usuario.Senha = txtSenhaUsuario.Text;
+            usuario.Nome = txtNomeUsuario.Text;
+            usuario.Ativo = chkAtivoUsuario.Checked;
+
+            dados.Add(usuario);
         }
     }
 }
