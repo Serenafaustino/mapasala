@@ -29,6 +29,20 @@ namespace mapasala.Formularios
             Professor.Apelido = txtApelidoprof.Text;
 
             dados.Add(Professor);
+            LimparCampos();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+
+        }
+
+        private void LimparCampos()
+        {
+            txtApelidoprof.Text = "";
+            txtNomeProf.Text = "";
+            numIdProf.Value = 0;
         }
     }
 }

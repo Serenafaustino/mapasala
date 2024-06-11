@@ -40,6 +40,7 @@ namespace mapasala.Formularios
             this.txtNomeUsuario = new System.Windows.Forms.TextBox();
             this.DtGridUsuarios = new System.Windows.Forms.DataGridView();
             this.btnSalvarUsuarios = new System.Windows.Forms.Button();
+            this.btnlimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numIdUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -122,6 +123,7 @@ namespace mapasala.Formularios
             // 
             // DtGridUsuarios
             // 
+            this.DtGridUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DtGridUsuarios.BackgroundColor = System.Drawing.Color.MistyRose;
             this.DtGridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGridUsuarios.Location = new System.Drawing.Point(32, 103);
@@ -139,11 +141,22 @@ namespace mapasala.Formularios
             this.btnSalvarUsuarios.UseVisualStyleBackColor = true;
             this.btnSalvarUsuarios.Click += new System.EventHandler(this.btnSalvarUsuarios_Click);
             // 
+            // btnlimpar
+            // 
+            this.btnlimpar.Location = new System.Drawing.Point(676, 31);
+            this.btnlimpar.Name = "btnlimpar";
+            this.btnlimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnlimpar.TabIndex = 11;
+            this.btnlimpar.Text = "Limpar";
+            this.btnlimpar.UseVisualStyleBackColor = true;
+            this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnSalvarUsuarios);
             this.Controls.Add(this.DtGridUsuarios);
             this.Controls.Add(this.txtNomeUsuario);
@@ -178,5 +191,6 @@ namespace mapasala.Formularios
         private System.Windows.Forms.TextBox txtNomeUsuario;
         private System.Windows.Forms.DataGridView DtGridUsuarios;
         private System.Windows.Forms.Button btnSalvarUsuarios;
+        private System.Windows.Forms.Button btnlimpar;
     }
 }

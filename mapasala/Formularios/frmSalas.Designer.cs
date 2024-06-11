@@ -41,6 +41,7 @@ namespace mapasala.Formularios
             this.numCadeiraSala1 = new System.Windows.Forms.NumericUpDown();
             this.dtGridSalas = new System.Windows.Forms.DataGridView();
             this.numIdSalas = new System.Windows.Forms.NumericUpDown();
+            this.btnlimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numCompsala1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCadeiraSala1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).BeginInit();
@@ -136,6 +137,7 @@ namespace mapasala.Formularios
             // 
             // dtGridSalas
             // 
+            this.dtGridSalas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGridSalas.BackgroundColor = System.Drawing.Color.MistyRose;
             this.dtGridSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridSalas.Location = new System.Drawing.Point(38, 73);
@@ -150,11 +152,22 @@ namespace mapasala.Formularios
             this.numIdSalas.Size = new System.Drawing.Size(50, 20);
             this.numIdSalas.TabIndex = 14;
             // 
+            // btnlimpar
+            // 
+            this.btnlimpar.Location = new System.Drawing.Point(713, 32);
+            this.btnlimpar.Name = "btnlimpar";
+            this.btnlimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnlimpar.TabIndex = 15;
+            this.btnlimpar.Text = "Limpar";
+            this.btnlimpar.UseVisualStyleBackColor = true;
+            this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click);
+            // 
             // frmSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 425);
+            this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.numIdSalas);
             this.Controls.Add(this.dtGridSalas);
             this.Controls.Add(this.numCadeiraSala1);
@@ -194,5 +207,6 @@ namespace mapasala.Formularios
         private System.Windows.Forms.NumericUpDown numCadeiraSala1;
         private System.Windows.Forms.DataGridView dtGridSalas;
         private System.Windows.Forms.NumericUpDown numIdSalas;
+        private System.Windows.Forms.Button btnlimpar;
     }
 }

@@ -31,6 +31,20 @@ namespace mapasala.Formularios
             usuario.Ativo = chkAtivoUsuario.Checked;
 
             dados.Add(usuario);
+            LimparCampos();
+        }
+
+        private void btnlimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+        private void LimparCampos()
+        {
+            txtLoginUsuario.Text = "";
+            txtNomeUsuario.Text = "";
+            txtSenhaUsuario.Text = "";
+            numIdUsuario.Value = 0;
+            chkAtivoUsuario.Checked = false;
         }
     }
 }

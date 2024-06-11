@@ -13,11 +13,12 @@ namespace mapasala.Formularios
 {
     public partial class frmDisciplinas : Form
     {
-        BindingSource dados;
+        DataTable dados;
+        int LinhaSelecionada;
         public frmDisciplinas()
         {
             InitializeComponent();
-            dados = new BindingSource();
+            dados = new DataTable();
             DtGridDisciplina.DataSource = dados;
         }
 
@@ -31,11 +32,31 @@ namespace mapasala.Formularios
         
 
             dados.Add(disciplina);
+            LimparCampos();
         }
 
         private void DtGridDisciplina_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+
+        private void LimparCampos()
+        {
+            txtNomeDisciplina.Text = "";
+            txtSiglaDisciplinas.Text = "";
+            numIdDisciplinas.Value = 0;
+            chkAtivoDisciplina.Checked = false;
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            DtGridDisciplina.Rows.RemoveAt(LinhaSelecionada);
+        }
     }
-}
+    }

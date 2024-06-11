@@ -37,6 +37,7 @@ namespace mapasala.Formularios
             this.bntSalvar = new System.Windows.Forms.Button();
             this.DtGridProfessores = new System.Windows.Forms.DataGridView();
             this.numIdProf = new System.Windows.Forms.NumericUpDown();
+            this.btnLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridProfessores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIdProf)).BeginInit();
             this.SuspendLayout();
@@ -94,11 +95,12 @@ namespace mapasala.Formularios
             // 
             // DtGridProfessores
             // 
+            this.DtGridProfessores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DtGridProfessores.BackgroundColor = System.Drawing.Color.MistyRose;
             this.DtGridProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGridProfessores.Location = new System.Drawing.Point(26, 113);
             this.DtGridProfessores.Name = "DtGridProfessores";
-            this.DtGridProfessores.Size = new System.Drawing.Size(408, 280);
+            this.DtGridProfessores.Size = new System.Drawing.Size(500, 280);
             this.DtGridProfessores.TabIndex = 7;
             // 
             // numIdProf
@@ -108,11 +110,22 @@ namespace mapasala.Formularios
             this.numIdProf.Size = new System.Drawing.Size(68, 20);
             this.numIdProf.TabIndex = 8;
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(451, 38);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.TabIndex = 9;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // frmProfessores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 450);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.numIdProf);
             this.Controls.Add(this.DtGridProfessores);
             this.Controls.Add(this.bntSalvar);
@@ -141,5 +154,6 @@ namespace mapasala.Formularios
         private System.Windows.Forms.Button bntSalvar;
         private System.Windows.Forms.DataGridView DtGridProfessores;
         private System.Windows.Forms.NumericUpDown numIdProf;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

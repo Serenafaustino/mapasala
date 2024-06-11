@@ -27,15 +27,25 @@ namespace mapasala.Formularios
             cursoEntidades curso = new cursoEntidades();
             curso.Id = Convert.ToInt32(numIdCursos.Value);
             curso.Nome = txtNomeCursos.Text;
+            curso.Turno = txtTurnoCursos.Text;
             curso.Ativo = chkAtivoCursos.Checked;
          
 
             dados.Add(curso);
+            LimparCampos();
         }
 
-        private void DtGridCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void bntLimpar_Click(object sender, EventArgs e)
         {
+            LimparCampos();
+        }
 
+        private void LimparCampos()
+        {
+            txtNomeCursos.Text = "";
+            txtTurnoCursos.Text = "";
+            numIdCursos.Value = 0;
+            chkAtivoCursos.Checked = false;
         }
     }
 }

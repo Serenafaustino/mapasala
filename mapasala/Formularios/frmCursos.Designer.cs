@@ -39,6 +39,7 @@ namespace mapasala.Formularios
             this.txtTurnoCursos = new System.Windows.Forms.TextBox();
             this.DtGridCursos = new System.Windows.Forms.DataGridView();
             this.numIdCursos = new System.Windows.Forms.NumericUpDown();
+            this.bntLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIdCursos)).BeginInit();
             this.SuspendLayout();
@@ -114,12 +115,13 @@ namespace mapasala.Formularios
             // 
             // DtGridCursos
             // 
+            this.DtGridCursos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DtGridCursos.BackgroundColor = System.Drawing.Color.MistyRose;
             this.DtGridCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGridCursos.Location = new System.Drawing.Point(0, 96);
             this.DtGridCursos.Name = "DtGridCursos";
-            this.DtGridCursos.Size = new System.Drawing.Size(402, 150);
+            this.DtGridCursos.Size = new System.Drawing.Size(513, 150);
             this.DtGridCursos.TabIndex = 9;
-            this.DtGridCursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridCursos_CellContentClick);
             // 
             // numIdCursos
             // 
@@ -128,11 +130,22 @@ namespace mapasala.Formularios
             this.numIdCursos.Size = new System.Drawing.Size(42, 20);
             this.numIdCursos.TabIndex = 10;
             // 
+            // bntLimpar
+            // 
+            this.bntLimpar.Location = new System.Drawing.Point(438, 24);
+            this.bntLimpar.Name = "bntLimpar";
+            this.bntLimpar.Size = new System.Drawing.Size(75, 23);
+            this.bntLimpar.TabIndex = 11;
+            this.bntLimpar.Text = "Limpar";
+            this.bntLimpar.UseVisualStyleBackColor = true;
+            this.bntLimpar.Click += new System.EventHandler(this.bntLimpar_Click);
+            // 
             // frmCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.numIdCursos);
             this.Controls.Add(this.DtGridCursos);
             this.Controls.Add(this.txtTurnoCursos);
@@ -164,5 +177,6 @@ namespace mapasala.Formularios
         private System.Windows.Forms.TextBox txtTurnoCursos;
         private System.Windows.Forms.DataGridView DtGridCursos;
         private System.Windows.Forms.NumericUpDown numIdCursos;
+        private System.Windows.Forms.Button bntLimpar;
     }
 }
