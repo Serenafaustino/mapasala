@@ -62,5 +62,11 @@ namespace mapasala
             frmUsuarios u = new frmUsuarios();
             u.ShowDialog();
         }
+
+        private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios c = new frmUsuarios();
+            c.ShowDialog();
+        }
     }
 }
