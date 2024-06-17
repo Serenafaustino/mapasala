@@ -41,6 +41,7 @@ namespace mapasala.Formularios
             this.numIdDisciplinas = new System.Windows.Forms.NumericUpDown();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditarDisciplina = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridDisciplina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIdDisciplinas)).BeginInit();
             this.SuspendLayout();
@@ -107,8 +108,9 @@ namespace mapasala.Formularios
             this.DtGridDisciplina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGridDisciplina.Location = new System.Drawing.Point(15, 81);
             this.DtGridDisciplina.Name = "DtGridDisciplina";
-            this.DtGridDisciplina.Size = new System.Drawing.Size(574, 236);
+            this.DtGridDisciplina.Size = new System.Drawing.Size(666, 236);
             this.DtGridDisciplina.TabIndex = 6;
+            this.DtGridDisciplina.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridDisciplina_CellClick);
             this.DtGridDisciplina.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridDisciplina_CellContentClick);
             // 
             // txtNomeDisciplina
@@ -152,11 +154,22 @@ namespace mapasala.Formularios
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // btnEditarDisciplina
+            // 
+            this.btnEditarDisciplina.Location = new System.Drawing.Point(606, 30);
+            this.btnEditarDisciplina.Name = "btnEditarDisciplina";
+            this.btnEditarDisciplina.Size = new System.Drawing.Size(75, 23);
+            this.btnEditarDisciplina.TabIndex = 13;
+            this.btnEditarDisciplina.Text = "Editar";
+            this.btnEditarDisciplina.UseVisualStyleBackColor = true;
+            this.btnEditarDisciplina.Click += new System.EventHandler(this.btnEditarDisciplina_Click);
+            // 
             // frmDisciplinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEditarDisciplina);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.numIdDisciplinas);
@@ -193,5 +206,6 @@ namespace mapasala.Formularios
         private System.Windows.Forms.NumericUpDown numIdDisciplinas;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnEditarDisciplina;
     }
 }

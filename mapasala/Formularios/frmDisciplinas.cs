@@ -19,6 +19,16 @@ namespace mapasala.Formularios
         {
             InitializeComponent();
             dados = new DataTable();
+            foreach (var atributos in typeof(DisciplinasEntidades).GetProperties())
+            {
+                dados.Columns.Add(atributos.Name);
+            }
+
+            dados.Rows.Add(1, "matematica", "math", true);
+            dados.Rows.Add(2, "português", "port", true);
+            dados.Rows.Add(3, "fisica", "fis", false);
+            dados.Rows.Add(4, "desenvolvimento de sistemas", "DS",true);
+
             DtGridDisciplina.DataSource = dados;
         }
 
@@ -29,9 +39,9 @@ namespace mapasala.Formularios
             disciplina.Nome = txtNomeDisciplina.Text;
             disciplina.Sigla = txtSiglaDisciplinas.Text;
             disciplina.Ativo = chkAtivoDisciplina.Checked;
-        
 
-            dados.Add(disciplina);
+
+            dados.Rows.Add(disciplina.Linha());
             LimparCampos();
         }
 
@@ -57,6 +67,26 @@ namespace mapasala.Formularios
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             DtGridDisciplina.Rows.RemoveAt(LinhaSelecionada);
+        }
+
+        private void DtGridDisciplina_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LinhaSelecionada = e.RowIndex;
+            numIdDisciplinas.Value = Convert.ToUInt32( DtGridDisciplina.Rows[LinhaSelecionada].Cells[0].Value);
+            txtNomeDisciplina.Text = DtGridDisciplina.Rows[LinhaSelecionada].Cells[1].Value.ToString(); 
+            txtSiglaDisciplinas.Text = DtGridDisciplina.Rows[LinhaSelecionada].Cells[2].Value.ToString();
+            chkAtivoDisciplina.Checked = Convert.ToBoolean(DtGridDisciplina.Rows[LinhaSelecionada].Cells[3].Value);
+        }
+
+        private void btnEditarDisciplina_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow a = DtGridDisciplina.Rows[LinhaSelecionada];
+            a.Cells[0].Value = numIdDisciplinas.Value;
+            a.Cells[1].Value = txtNomeDisciplina.Text;
+            a.Cells[2].Value = txtSiglaDisciplinas.Text;
+            a.Cells[3].Value = chkAtivoDisciplina.Checked; 
+
+
         }
     }
     }
