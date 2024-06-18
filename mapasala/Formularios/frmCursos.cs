@@ -81,5 +81,10 @@ namespace mapasala.Formularios
             a.Cells[2].Value = txtTurnoCursos.Text;
             a.Cells[3].Value = chkAtivoCursos.Checked;
         }
+
+        private void btnExcluirCurso_Click_1(object sender, EventArgs e)
+        {
+            DtGridCursos.Rows.RemoveAt(LinhaSelecionada);
+        }
     }
 }

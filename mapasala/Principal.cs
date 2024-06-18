@@ -65,7 +65,7 @@ namespace mapasala
 
         private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUsuarios c = new frmUsuarios();
+            frmCursos c = new frmCursos();
             c.ShowDialog();
         }
     }

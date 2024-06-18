@@ -42,6 +42,8 @@ namespace mapasala.Formularios
             this.dtGridSalas = new System.Windows.Forms.DataGridView();
             this.numIdSalas = new System.Windows.Forms.NumericUpDown();
             this.btnlimpar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numCompsala1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCadeiraSala1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).BeginInit();
@@ -142,8 +144,9 @@ namespace mapasala.Formularios
             this.dtGridSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridSalas.Location = new System.Drawing.Point(38, 73);
             this.dtGridSalas.Name = "dtGridSalas";
-            this.dtGridSalas.Size = new System.Drawing.Size(727, 329);
+            this.dtGridSalas.Size = new System.Drawing.Size(910, 329);
             this.dtGridSalas.TabIndex = 13;
+            this.dtGridSalas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridSalas_CellClick);
             // 
             // numIdSalas
             // 
@@ -162,11 +165,33 @@ namespace mapasala.Formularios
             this.btnlimpar.UseVisualStyleBackColor = true;
             this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click);
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(794, 31);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 16;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(875, 30);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 17;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // frmSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 425);
+            this.ClientSize = new System.Drawing.Size(960, 425);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.numIdSalas);
             this.Controls.Add(this.dtGridSalas);
@@ -208,5 +233,7 @@ namespace mapasala.Formularios
         private System.Windows.Forms.DataGridView dtGridSalas;
         private System.Windows.Forms.NumericUpDown numIdSalas;
         private System.Windows.Forms.Button btnlimpar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

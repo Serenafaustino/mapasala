@@ -161,6 +161,7 @@ namespace mapasala.Formularios
             this.btnExcluirCurso.TabIndex = 13;
             this.btnExcluirCurso.Text = "Excluir";
             this.btnExcluirCurso.UseVisualStyleBackColor = true;
+            this.btnExcluirCurso.Click += new System.EventHandler(this.btnExcluirCurso_Click_1);
             // 
             // frmCursos
             // 

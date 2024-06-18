@@ -41,6 +41,8 @@ namespace mapasala.Formularios
             this.DtGridUsuarios = new System.Windows.Forms.DataGridView();
             this.btnSalvarUsuarios = new System.Windows.Forms.Button();
             this.btnlimpar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numIdUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -128,12 +130,13 @@ namespace mapasala.Formularios
             this.DtGridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGridUsuarios.Location = new System.Drawing.Point(32, 103);
             this.DtGridUsuarios.Name = "DtGridUsuarios";
-            this.DtGridUsuarios.Size = new System.Drawing.Size(565, 150);
+            this.DtGridUsuarios.Size = new System.Drawing.Size(859, 212);
             this.DtGridUsuarios.TabIndex = 9;
+            this.DtGridUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridUsuarios_CellClick);
             // 
             // btnSalvarUsuarios
             // 
-            this.btnSalvarUsuarios.Location = new System.Drawing.Point(586, 33);
+            this.btnSalvarUsuarios.Location = new System.Drawing.Point(573, 31);
             this.btnSalvarUsuarios.Name = "btnSalvarUsuarios";
             this.btnSalvarUsuarios.Size = new System.Drawing.Size(75, 23);
             this.btnSalvarUsuarios.TabIndex = 10;
@@ -143,7 +146,7 @@ namespace mapasala.Formularios
             // 
             // btnlimpar
             // 
-            this.btnlimpar.Location = new System.Drawing.Point(676, 31);
+            this.btnlimpar.Location = new System.Drawing.Point(654, 31);
             this.btnlimpar.Name = "btnlimpar";
             this.btnlimpar.Size = new System.Drawing.Size(75, 23);
             this.btnlimpar.TabIndex = 11;
@@ -151,11 +154,33 @@ namespace mapasala.Formularios
             this.btnlimpar.UseVisualStyleBackColor = true;
             this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click);
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(735, 31);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 12;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(816, 33);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 13;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(971, 450);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnSalvarUsuarios);
             this.Controls.Add(this.DtGridUsuarios);
@@ -192,5 +217,7 @@ namespace mapasala.Formularios
         private System.Windows.Forms.DataGridView DtGridUsuarios;
         private System.Windows.Forms.Button btnSalvarUsuarios;
         private System.Windows.Forms.Button btnlimpar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
