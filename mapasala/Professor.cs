@@ -21,5 +21,10 @@ namespace mapasala
         {
 
         }
+
+        private void Professor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

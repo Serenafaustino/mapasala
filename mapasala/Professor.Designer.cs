@@ -90,6 +90,7 @@ namespace mapasala
             this.Controls.Add(this.button1);
             this.Name = "Professor";
             this.Text = "Professor";
+            this.Load += new System.EventHandler(this.Professor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
