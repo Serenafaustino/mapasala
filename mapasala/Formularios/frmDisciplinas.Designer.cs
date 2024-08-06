@@ -185,6 +185,7 @@ namespace mapasala.Formularios
             this.Name = "frmDisciplinas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDisciplinas";
+            this.Load += new System.EventHandler(this.frmDisciplinas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtGridDisciplina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIdDisciplinas)).EndInit();
             this.ResumeLayout(false);

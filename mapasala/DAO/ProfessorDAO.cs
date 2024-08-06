@@ -1,4 +1,6 @@
 ﻿using Model.Entidades;
+using System;
+using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Text;
@@ -12,7 +14,7 @@ namespace mapasala.DAO
         private SqlConnection Conexao;
         public ProfessorDAO()
         {
-            Conexao = new SqlConnection(LinhaConexao);
+            Conexao = new SqlConnection(LinhaConexao); 
         }
         public void Inserir(ProfessoresEntidade professor)
         {
@@ -27,6 +29,31 @@ namespace mapasala.DAO
             Conexao.Close();
         }
 
+        public DataTable ObterProfessores()
+        {
+            DataTable dt = new DataTable();
+            Conexao.Open();
+            string query = "SELECT Id, Nome, Apelido FROM Professores Order by Id desc";
+            SqlCommand comando = new SqlCommand(query, Conexao);
 
+            SqlDataReader Leitura = comando.ExecuteReader();
+            foreach(var atributos in typeof(ProfessoresEntidade).GetProperties())
+            {
+                dt.Columns.Add(atributos.Name);
+            }
+            if (Leitura.HasRows)
+            {
+                while (Leitura.Read())
+                {
+                    ProfessoresEntidade Professor = new ProfessoresEntidade();
+                    Professor.Id = Convert.ToInt32(Leitura[0]);
+                    Professor.Nome = Leitura[1].ToString();
+                    Professor.Apelido = Leitura[2].ToString();
+                    dt.Rows.Add(Professor.Linha());
+                }
+            }
+
+            return dt;
+        }
     }
 }

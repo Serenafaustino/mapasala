@@ -162,6 +162,7 @@ namespace mapasala.Formularios
             this.Name = "frmProfessores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProfessores";
+            this.Load += new System.EventHandler(this.frmProfessores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtGridProfessores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIdProf)).EndInit();
             this.ResumeLayout(false);
