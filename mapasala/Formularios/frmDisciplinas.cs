@@ -1,4 +1,5 @@
-﻿using Model.Entidades;
+﻿using mapasala.DAO;
+using Model.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,21 +15,18 @@ namespace mapasala.Formularios
     public partial class frmDisciplinas : Form
     {
         DataTable dados;
+        DisciplinaDAO dao = new DisciplinaDAO();
         int LinhaSelecionada;
         public frmDisciplinas()
         {
             InitializeComponent();
             dados = new DataTable();
+
             foreach (var atributos in typeof(DisciplinasEntidades).GetProperties())
             {
                 dados.Columns.Add(atributos.Name);
             }
-
-            dados.Rows.Add(1, "matematica", "math", true);
-            dados.Rows.Add(2, "português", "port", true);
-            dados.Rows.Add(3, "fisica", "fis", false);
-            dados.Rows.Add(4, "desenvolvimento de sistemas", "DS",true);
-
+            dados = dao.ObterDisciplinas();
             DtGridDisciplina.DataSource = dados;
         }
 
@@ -41,7 +39,12 @@ namespace mapasala.Formularios
             disciplina.Ativo = chkAtivoDisciplina.Checked;
 
 
-            dados.Rows.Add(disciplina.Linha());
+         DisciplinaDAO dao = new DisciplinaDAO();
+            dao.Inserir(disciplina);
+
+            DtGridDisciplina.DataSource = dao.ObterDisciplinas();
+
+
             LimparCampos();
         }
 
